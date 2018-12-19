@@ -2,10 +2,7 @@ package guru.leco.graphql.domain;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -24,5 +21,6 @@ public class Post {
 
     private String message;
 
+    @OneToMany(mappedBy = "post")
     private List<Comment> comments;
 }
