@@ -1,6 +1,6 @@
 package guru.leco.graphql.resources;
 
-import guru.leco.graphql.resources.requests.PostRequest;
+import guru.leco.graphql.domain.Post;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +17,7 @@ public class PostResource {
     static final String PATH = "/post";
 
     @PostMapping
-    public ResponseEntity create(@RequestBody PostRequest post) throws URISyntaxException {
+    public ResponseEntity create(@RequestBody Post post) throws URISyntaxException {
 
         return ResponseEntity.created(new URI(PATH + "/")).build();
     }
