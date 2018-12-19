@@ -1,7 +1,6 @@
 package guru.leco.graphql.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +11,9 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Post {
 
     @Id
